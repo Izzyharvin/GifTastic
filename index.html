@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS Stylesheet and Bootstrap for the Gify -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <!-- Title of the File that will be in the tab -->
+    <title>GifTastic</title>
+</head>
+
+<body>
+    <!-- Title on the page with bold -->
+    <hi><strong>Gifs of Actors</strong></hi>
+    <!-- Putting the buttons in columns of fours -->
+    <div class="container">
+        <div class="row" id="buttons">
+            <!-- This is the id for the buttons to click on the page -->
+            <div class="col-sm-3"><button data-actor="will smith">Will Smith</button></div>
+            <div class="col-sm-3"><button data-actor="bruce lee">Bruce Lee</button></div>
+            <div class="col-sm-3"><button data-actor="kevin hart">Kevin Hart</button></div>
+            <div class="col-sm-3"><button data-actor="samuel jackson">Samuel Jackson</button></div>
+            <div class="col-sm-3"><button data-actor="denzel washington">Denzel Washington</button></div>
+            <div class="col-sm-3"><button data-actor="morgan freeman">Morgan Freeman</button></div>
+            <div class="col-sm-3"><button data-actor="johnny depp">Johnny Depp</button></div>
+            <div class="col-sm-3"><button data-actor="halle berry">Halle Berry</button></div>
+            <div class="col-sm-3"><button data-actor="scarlett johansson">Scarlett Johansson</button></div>
+            <div class="col-sm-3"><button data-actor="chris hemsworth">Chris Hemsworth</button></div>
+            <div class="col-sm-3"><button data-actor="tom holland">Tom Holland</button></div>
+        </div>
+    </div>
+
+    <!-- This is the area where the gifs show up -->
+    <div id="gifs-appear-here"></div>
+
+    <!-- This is the jQuery code CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        
+    <!-- The function of the gify from javascript -->
+    <script src="./assets/javascript/gif-function.js"></script>
+</body>
+
+</html>
