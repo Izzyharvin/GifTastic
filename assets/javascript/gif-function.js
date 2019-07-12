@@ -19,23 +19,41 @@ $("button").on("click", function () {
         console.log(response)
         $("#gifs-appear-here").empty()
         for (i = 0; i < 10; i++) {
-            var gif = $("<img src='" + response.data[i].images.fixed_height.url + "'>")
+            var gif = $("<img class='gif-Image' src='" + response.data[i].images.fixed_height.url + "'>")
+            $(gif).attr("data-animated", response.data[i].images.fixed_height.url)
+            $(gif).attr("data-still", response.data[i].images.fixed_height_still.url)
+            $(gif).attr("data-state", )
             $("#gifs-appear-here").append(gif)
         }
     });
 });
 
-$(".gif").on("click", function() {
-    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    var state = $(this).attr("data-actor");
-    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-    // Then, set the image's data-state to animate
-    // Else set src to the data-still value
+$(document).on("click", '.gif-Image', function() {
+    console.log("this works");
+    var state = $(this).attr("");
     if (state === "still") {
-      $(this).attr("img src", $(this).attr("data-animate"));
-      $(this).attr("data-actor", "animate");
-    } else {
-      $(this).attr("img src", $(this).attr("data-still"));
-      $(this).attr("data-actor", "still");
+        $(this).attr("src", $(this).attr("response.data[i].images.fixed_height.url"));
+        $(this).attr("data-state", "animate");
     }
-  });
+    else {
+        $(this).attr("src", $(this).attr("response.data[i].images.fixed_height_still.url"));
+        $(this).attr("data-state", "still");
+    }
+});
+
+//Grabbing the id of add-actor then using the .on("click") function.
+$("#add-actor").on("click", function(event) {
+    //Automatically refresh page after pressing the click button
+    event.preventDefault();
+    //Made a variable called btnText equal to the input actor that the user puts in and .trim means it cut out
+    //the spaces before and after the text and .val stores what the user type.
+    var btnText = $("#actor-input").val().trim()
+    //Made a variable newBtn equal to the method "new" button. 
+    var newBtn = $("<button>")
+    //The newBtn attribute
+    newBtn.attr("actor", btnText)
+    //The newBtn.text is going to replace the text with what the user looking for.
+    newBtn.text(btnText)
+    //The method buttons is going to append with the rest of the buttons.
+    $("#buttons").append(newBtn)
+})
