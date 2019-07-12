@@ -33,14 +33,24 @@
             <div class="col-sm-3"><button data-actor="tom holland">Tom Holland</button></div>
         </div>
     </div>
+    <!-- Name of the id -->
+    <form id="movie-form">
+        <!-- Labeling the button -->
+        <label for="actor-input">Choose Your Actor!</label>
+        <!-- The search -->
+        <input type="text" id="actor-input">
+        <br>
+        <!-- Button to put a new actor -->
+        <input id="add-movie" type="submit" value="Submit">
+    </form>
 
     <!-- This is the area where the gifs show up -->
     <div id="gifs-appear-here"></div>
 
-    <!-- This is the jQuery code CDN -->
+    <!-- This is the jQuery code functions nd methods in a javascript file -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        
+
     <!-- The function of the gify from javascript -->
     <script src="./assets/javascript/gif-function.js"></script>
 </body>
