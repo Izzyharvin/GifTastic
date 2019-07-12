@@ -8,7 +8,7 @@ $("button").on("click", function () {
     // and .attr is the method that gets the attribute value for the element 
     var person = $(this).attr("data-actor");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+        person + "&rating=PG&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
     //Its a method using .ajax to pass a URL from the query in the variable and using method to GET the information
     $.ajax({
         url: queryURL,
@@ -22,7 +22,8 @@ $("button").on("click", function () {
             var gif = $("<img class='gif-Image' src='" + response.data[i].images.fixed_height.url + "'>")
             $(gif).attr("data-animated", response.data[i].images.fixed_height.url)
             $(gif).attr("data-still", response.data[i].images.fixed_height_still.url)
-            $(gif).attr("data-state", )
+            $(gif).attr("data-state")
+            $(gif).attr("data-rating", response.data[i].rating)
             $("#gifs-appear-here").append(gif)
         }
     });
@@ -32,11 +33,11 @@ $(document).on("click", '.gif-Image', function() {
     console.log("this works");
     var state = $(this).attr("");
     if (state === "still") {
-        $(this).attr("src", $(this).attr("response.data[i].images.fixed_height.url"));
+        $(this).attr("src", $(this).attr("data-animated"));
         $(this).attr("data-state", "animate");
     }
     else {
-        $(this).attr("src", $(this).attr("response.data[i].images.fixed_height_still.url"));
+        $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
     }
 });
