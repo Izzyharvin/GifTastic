@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    background: red;
+    height: 150px;
+    width: 90%;
+    padding: 50px;
+    font-family: 'Bahianita', cursive;
+    border-radius: 25px;
+    margin: auto;
+}
+#gifs-appear-here {
+    text-align: center;
+    padding: 100px;
+}
+#buttons {
+    font-family: 'Bahianita', cursive;
+    padding-top: 50px;
+}
+#actor-form {
+    padding-top: 80px;
+    padding-left: 80px;
+}
