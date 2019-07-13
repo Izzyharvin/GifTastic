@@ -2,7 +2,7 @@
 var actors = ["will smith", "bruce lee", "kevin hart", "samuel jackson", "denzel washington", "morgan freeman", "johnny depp", "halle berry", "scarlett johansson", "chris hemsworth", "tom holland"]
 
 // This is a button that catches when the user clicks on a button
-$("button").on("click", function () {
+$("button").on("click", "gifBtn", function () {
     console.log(this)
     // The variable person which is equal (this) that converts the DOM element returned by this to a jQuery object 
     // and .attr is the method that gets the attribute value for the element 
@@ -43,7 +43,7 @@ $("button").on("click", function () {
 $(document).on("click", '.gif-Image', function() {
     console.log("this works");
     //Made a variable called state which is equal to the method (this) and the .attribute is data-animated. 
-    var state = $(this).attr("");
+    var state = $(this).attr("data-state");
     //This is a if/else statement that if the state equal still then it will animate but for else if the data is
     //clicked it will turn from animate to still.
     if (state === "still") {
@@ -66,7 +66,10 @@ $("#add-actor").on("click", function(event) {
     //Made a variable newBtn equal to the method "new" button. 
     var newBtn = $("<button>")
     //The newBtn attribute
-    newBtn.attr("actor", btnText)
+    newBtn.addClass("gifBtn") {
+        console.log("it work")
+    }
+    newBtn.attr("data-actor", btnText)
     //The newBtn.text is going to replace the text with what the user looking for.
     newBtn.text(btnText)
     //The method buttons is going to append with the rest of the buttons.
