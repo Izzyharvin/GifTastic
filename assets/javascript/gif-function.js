@@ -2,7 +2,7 @@
 var actors = ["will smith", "bruce lee", "kevin hart", "samuel jackson", "denzel washington", "morgan freeman", "johnny depp", "halle berry", "scarlett johansson", "chris hemsworth", "tom holland"]
 
 // This is a button that catches when the user clicks on a button
-$("button").on("click", "gifBtn", function () {
+$(document).on("click", ".gifBtn", function () {
     console.log(this)
     // The variable person which is equal (this) that converts the DOM element returned by this to a jQuery object 
     // and .attr is the method that gets the attribute value for the element 
@@ -66,7 +66,7 @@ $("#add-actor").on("click", function(event) {
     //Made a variable newBtn equal to the method "new" button. 
     var newBtn = $("<button>")
     //The newBtn attribute
-    newBtn.addClass("gifBtn") {
+    newBtn.addClass("gifBtn") ;{
         console.log("it work")
     }
     newBtn.attr("data-actor", btnText)
