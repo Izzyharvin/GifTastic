@@ -13,7 +13,7 @@ Gif application that uses the GIPHY API to ask users choice of GIFs.
 - Giphy API
 - Ajax
 
-# # How To Play Hangman Game
+# How to use Giftastic
 
 - First step is go to link and page will open up.
 ![gif page](./assets/images/homepage.png)
